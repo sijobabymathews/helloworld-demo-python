@@ -3,9 +3,7 @@ on: push
 jobs:
   devSecOps:
     runs-on: ubuntu-latest
-    steps:
-      name: gitleaks
-    runs-on: ubuntu-latest
+    name: gitleaks
     steps:
       - uses: actions/checkout@v6
         with:
