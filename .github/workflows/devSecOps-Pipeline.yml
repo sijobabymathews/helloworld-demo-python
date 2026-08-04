@@ -1,0 +1,17 @@
+name: devSecops-Pipeline
+on: push
+jobs:
+  devSecOps:
+    runs-on: ubuntu-latest
+    steps:
+      name: gitleaks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: gitleaks/gitleaks-action@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  
